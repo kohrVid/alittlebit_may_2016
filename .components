@@ -1,0 +1,9 @@
+---
+:orm: activerecord
+:test: minitest
+:mock: mocha
+:script: jquery
+:renderer: haml
+:stylesheet: scss
+:namespace: Alittlebit
+:migration_format: number

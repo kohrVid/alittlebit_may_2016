@@ -1,0 +1,81 @@
+body {
+  border-top: 5px solid #52cbb3;
+  font-family: Arial, sans-serif;
+  color: #010101;
+  overflow-x: hidden; }
+  body .paperback {
+    background-position: 8px -66px; }
+  body .ebook {
+    background-position: 8px -100px; }
+  body .book-format {
+    font-family: Arial, sans-serif;
+    font-size: 0.75em;
+    background-color: #d7d4d4;
+    background-image: url("/images/a-little-bit_icons_50x226.png");
+    background-size: 11%;
+    background-repeat: no-repeat;
+    height: 35px;
+    width: 175px;
+    padding: 5px 0 0 35px;
+    border-radius: 3px; }
+    body .book-format strong {
+      display: block; }
+    body .book-format .buy {
+      position: relative;
+      top: -6px;
+      left: 20px;
+      background-color: #fb46ca;
+      color: white;
+      padding: 8px 17px;
+      border-radius: 5px; }
+  body #additional-info {
+    background-color: #d7d4d4;
+    padding: 3px 10px;
+    border-radius: 3px;
+    font-size: 0.8em;
+    margin-bottom: 10px; }
+
+a:link, a:visited, a:hover, a:active {
+  color: #010101;
+  text-decoration: none; }
+
+.inline-image {
+  display: inline;
+  float: left;
+  padding: 0 10px; }
+
+.inline-list {
+  list-style-type: none; }
+  .inline-list li {
+    display: inline-block; }
+
+.display-inline {
+  display: inline; }
+
+.display-block {
+  display: block; }
+
+.stretch-image img {
+  position: relative;
+  width: 100%; }
+
+.more-bits img {
+  margin: auto;
+  text-align: center; }
+
+.icon {
+  display: inline-block;
+  position: relative;
+  background-color: #fb46ca;
+  background-position: 25px 0;
+  border-radius: 100px; }
+
+.icon--bulb {
+  background-image: url("/images/a-little-bit_icons_50x226.png");
+  background-repeat: no-repeat;
+  width: 100px;
+  height: 100px;
+  left: 10px;
+  top: 16px; }
+
+/*# sourceMappingURL=header.css.map */

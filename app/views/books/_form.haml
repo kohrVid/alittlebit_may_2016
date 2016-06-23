@@ -1,0 +1,15 @@
+= form_for @book, url_for(:books, :create) do |f|
+  - Book.columns.map(&:name).each do |col|
+    - unless ["id", "created_at", "updated_at"].include? col
+      %fieldset
+        %strong
+          = f.label col
+        - if col == "published_on"
+          = f.date_field col, max: (Time.now + 3.years), value: Time.now
+        - elsif col == "synopsis"
+          = f.text_area col
+        - else
+          = f.text_field col
+  %fieldset
+    = f.submit "Submit", class: "button"
+

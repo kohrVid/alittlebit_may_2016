@@ -23,6 +23,7 @@ gem 'activerecord', '>= 3.1', :require => 'active_record'
 gem 'pg'
 
 # Test requirements
+gem 'database_cleaner', :group => 'test'
 gem 'mocha', :group => 'test', :require => false
 gem 'minitest', :require => 'minitest/autorun', :group => 'test'
 gem 'rack-test', :require => 'rack/test', :group => 'test'

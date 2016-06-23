@@ -1,0 +1,14 @@
+@import "main.scss";
+#footer {
+  background-color: $medium-grey;
+  color: white;
+  i {
+    font-size: 1.6em;
+  }
+  i:first-child {
+    padding: 0.4em 0.6em !important;
+  }
+  li {
+    margin: 0 0.7em;
+  }
+}

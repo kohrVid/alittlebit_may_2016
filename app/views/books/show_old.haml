@@ -1,0 +1,7 @@
+%h1 
+  =@book.title
+- Book.columns.map(&:name).each do |col|
+  %p
+    %strong
+      = "#{col.split("_").map(&:capitalize).join(" ")}:"
+    = @book.send(col)

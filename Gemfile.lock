@@ -16,6 +16,7 @@ GEM
       tzinfo (~> 1.1)
     arel (6.0.3)
     builder (3.2.2)
+    database_cleaner (1.5.1)
     enumerable-lazy (0.0.1)
     haml (4.0.7)
       tilt
@@ -89,6 +90,7 @@ PLATFORMS
 
 DEPENDENCIES
   activerecord (>= 3.1)
+  database_cleaner
   haml
   minitest
   mocha
@@ -97,6 +99,3 @@ DEPENDENCIES
   rack-test
   rake
   sass
-
-BUNDLED WITH
-   1.12.4

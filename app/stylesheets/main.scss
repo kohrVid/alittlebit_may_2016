@@ -1,0 +1,113 @@
+$primary-colour: #52cbb3;
+$default-colour: #010101;
+$medium-grey: #aea9a9;
+$dark-grey: #6c6c6c;
+$light-grey: #d7d4d4;
+$pink: #fb46ca;
+$serif: "Times New Roman", times, serif;
+$sans-serif: Arial, sans-serif;
+
+@mixin quotation-font {
+  font: {
+    size: 3em;
+    weight: bold;
+    family: $serif;
+  }
+  color: $pink;
+}
+
+@mixin inline-list {
+  list-style-type: none;
+  li {
+    display: inline-block;
+  }
+}
+
+body {
+  border-top: 5px solid $primary-colour;
+  font-family: $sans-serif;
+  color: $default-colour;
+  overflow-x: hidden;
+
+  .paperback{
+    background-position: 8px -66px;
+  }
+
+  .ebook{
+    background-position: 8px -100px;
+  }
+
+  .book-format {
+    font-family: $sans-serif;
+    font-size: 0.75em;
+    background-color: $light-grey;
+    background-image: url("/images/a-little-bit_icons_50x226.png");
+    background-size: 11%;
+    background-repeat: no-repeat;
+    height: 35px;
+    width: 175px;
+    padding: 5px 0 0 35px;
+    border-radius: 3px;
+    strong {
+      display: block;
+    }
+    .buy {
+      position: relative;
+      top: -6px;
+      left: 20px;
+      background-color: $pink;
+      color: white;
+      padding: 8px 17px;
+      border-radius: 5px;
+    }
+  }
+  
+  #additional-info {
+    background-color: $light-grey;
+    padding: 3px 10px;
+    border-radius: 3px;
+    font-size: 0.8em;
+    margin-bottom: 10px;
+  }
+}
+
+a:link,  a:visited,  a:hover,  a:active { 
+  color: $default-colour;
+  text-decoration: none;
+}
+
+
+.inline-image {
+  display: inline;
+  float: left;
+  padding: 0 10px;
+}
+
+.inline-list {
+  list-style-type: none;
+  li {
+    display: inline-block;
+  }
+}
+
+.display-inline {
+  display: inline;
+}
+
+.display-block {
+  display: block;
+}
+
+.stretch-image {
+  img {
+    position: relative;
+    width: 100%;
+  }
+}
+
+.more-bits {
+  img {
+   margin:auto;
+   text-align: center;
+  }
+}

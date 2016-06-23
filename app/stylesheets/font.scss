@@ -1,0 +1,43 @@
+@import "main.scss";
+h1, h2, .aside-heading {
+  font-weight: normal;
+  font-family: $serif;
+}
+
+h1 {
+  font-weight: normal;
+}
+
+h2, .aside-heading {
+  font-weight: bold;
+  font-size: 1.7em;
+}
+
+.white-anchor-text {
+  &:link,  &:visited,  &:hover,  &:active { 
+    color: #fff !important;
+  }
+}
+
+.secondary-colour {
+  color: #067c24;
+  font-family: $serif;
+  font-size: 1.2em;
+  top: -16px;
+}
+
+.dark-grey {
+  color: $dark-grey;
+  font: {
+    weight: bold;
+    size: 1em;
+  }
+}
+.dark-grey-small {
+  color: $dark-grey;
+  font-size: 0.8em;
+}
+
+.knowledge {
+  font-size: 1.2em; 
+}

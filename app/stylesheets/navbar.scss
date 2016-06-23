@@ -1,0 +1,32 @@
+@import "main.scss";
+nav {
+  position: relative;
+  top: -5em;
+  ul {
+    li {
+      margin: 0 0.3em;
+      font-size: 1em;
+    }
+  }
+}
+
+#shopping {
+  background: {
+    image: url("/images/a-little-bit_icons_50x226.png");
+    repeat: no-repeat;
+    position: 36px -109px;
+    color: $medium-grey;
+  }
+  width: 80px;
+  height: 33px;
+  border-radius: 10px;
+  a {
+    background-color: $light-grey;
+    padding: 4px 8px;
+    margin: 1px;
+    border-radius: 50%;
+    position: relative;
+    top: 8px;
+    left: 6px;
+  }
+}

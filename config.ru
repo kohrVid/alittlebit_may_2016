@@ -7,3 +7,5 @@
 require File.expand_path("../config/boot.rb", __FILE__)
 
 run Padrino.application
+require 'sass/plugin/rack'
+use Sass::Plugin::Rack

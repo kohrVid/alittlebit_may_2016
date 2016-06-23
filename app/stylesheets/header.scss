@@ -1,0 +1,28 @@
+@import "main.scss";
+
+.top-header{
+  .company-name {
+    
+  }
+}
+
+.icon {
+  display: inline-block;
+  position: relative;
+  background: {
+    color: $pink;
+    position: 25px 0;
+  }
+  border-radius: 100px;
+}
+
+.icon--bulb {
+  background: {
+    image: url("/images/a-little-bit_icons_50x226.png");
+    repeat: no-repeat;
+  }
+  width: 100px;
+  height: 100px;
+  left: 10px;
+  top: 16px;
+}

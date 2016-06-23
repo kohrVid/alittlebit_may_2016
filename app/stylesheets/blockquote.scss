@@ -1,0 +1,28 @@
+blockquote {
+  display: table-cell;
+  width: 40%;
+  margin: 0.1em 3em;
+  padding: 1em 2em;
+  position:relative;
+  &:before {
+    content: "\201c";
+    @include quotation-font;
+    position: absolute;
+    left: 6px;
+    top: -7px;
+  }
+  &:after {
+    content: "\201d";
+    @include quotation-font;
+    position: absolute;
+    right: 6px;
+    bottom: -7px;
+  }
+  cite{
+    display: block;
+    font-weight: bold;
+    padding: 1em 0;
+    color: $pink;
+  }
+}
+

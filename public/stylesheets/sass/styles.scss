@@ -1,0 +1,148 @@
+/**Mixins and Variables!!!**/
+@mixin gradient($angle, $colour...) {
+  background: #{$colour};
+  background: -webkit-linear-gradient(unquote('#{$angle}deg'), #{$colour});
+  background: -o-linear-gradient(unquote('#{$angle}deg'), #{$colour});
+  background: -moz-linear-gradient(unquote('#{$angle}deg'), #{$colour});
+  background: linear-gradient(unquote('#{$angle}deg'), #{$colour});
+}
+  
+$noir: #010102;
+$snow: #e5e5f8;
+$inq: #091e59;
+$silver: #d4d4e0;
+$kale: #083b1a;
+
+/*
+$pallete: (
+  noir: #010102,
+  snow: #e5e5f8,
+  inq: #091e59,
+  silver: #d4d4e0,
+  kale: #083b1a
+);
+//!default just sets this as the default scheme
+
+@each $name, $colour in $pallete {
+  .c-#{ $name } {
+    color: $colour;
+  }
+}
+*/
+
+//with a map
+/*
+$padding-sizes: (
+  small: 8px,
+  medium: 16px,
+  large: 24px
+);
+
+//$padding: 16px !default;
+//with a list (like an array) 
+$padding-sizes: (small, medium, large);
+$factor: 0.5; //half base unit which should default to 16px
+//The each creates multiple classes based on the size chosen
+@each $size in $padding-sizes {
+  .p-#{$size}-top {
+    padding-top: $padding * $factor;
+  }
+  .p-#{$size}-bottom {
+    padding-bottom: $padding;
+  }
+  .p-#{$size}-right {
+    padding-right: $padding;
+  }
+  .p-#{$size}-left {
+    padding-left: $padding;
+  }
+  $factor: $factor + 0.5;
+  //factor goes up each time you go up the loop
+}
+*/
+
+
+///////////////////////////////
+
+body {
+  background: {
+    image: url("/images/quill.jpg");
+    size: cover;
+    attachment: fixed;
+    repeat: no-repeat;
+  }
+  font-family: sans-serif;
+  overflow-x: hidden;
+}
+
+#nav {
+  @include gradient(-45, $snow, $inq, $noir);
+  line-height: 2.3rem;
+  position: absolute;
+  top: 27rem;
+  width: 100%;
+}
+
+.content {
+  @include gradient(180, $noir, $silver);
+  background: {
+    size: cover;
+    attachment: fixed;
+    repeat: no-repeat;
+  }
+  position: relative;
+  font-family: sans-serif;
+  padding: 0 2.3rem;
+  color: $snow;
+  margin: 16rem 0 -3rem 0;
+  display: block;
+  top: 15rem;
+  bottom: 0;
+  footer {
+    @include gradient(-45, $snow, $inq, $noir);
+    width: 100%;
+    position: relative;
+    bottom: 0%;
+    margin-left: -2.4rem;
+    margin-right: -2.4rem;
+    width: 108%;
+  }
+}
+
+.no-bullet {
+  list-style-type: none;
+}
+
+a {
+  &:link, &:visited, &:hover, &:active {
+    text-decoration: none;
+    font-weight: bold;
+    color: $snow;
+    transition: color 5s ease-out;
+  }
+  &:hover{
+    color: darken($snow, 80%);
+    transform: size(3);
+  }
+}
+
+.button {
+  background-color: $noir;
+  color: $snow;
+  font-weight: bold;
+  height: 2.5rem;
+  border: 0;
+  border-radius: 35%;
+  margin: auto;
+  &:active {
+    transform: rotate(45deg);
+  }
+}
+
+fieldset {
+  border: 0;
+  label {
+    display: inline-block;
+    width: 100%;
+  }
+}

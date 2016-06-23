@@ -16,30 +16,26 @@
 ActiveRecord::Base.configurations[:development] = {
   :adapter   => 'postgresql',
   :database  => 'alittlebit_development',
-  :username  => 'root',
-  :password  => '',
-  :host      => 'localhost',
-  :port      => 5432
+#  :host      => 'localhost',
+ # :port      => 5432
 
 }
 
 ActiveRecord::Base.configurations[:production] = {
   :adapter   => 'postgresql',
   :database  => 'alittlebit_production',
-  :username  => 'root',
-  :password  => '',
-  :host      => 'localhost',
-  :port      => 5432
+#  :username  => 'root',
+ # :password  => '',
+#  :host      => 'localhost',
+ # :port      => 5432
 
 }
 
 ActiveRecord::Base.configurations[:test] = {
   :adapter   => 'postgresql',
   :database  => 'alittlebit_test',
-  :username  => 'root',
-  :password  => '',
-  :host      => 'localhost',
-  :port      => 5432
+#  :host      => 'localhost',
+#  :port      => 5432
 
 }
 

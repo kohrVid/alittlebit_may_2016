@@ -1,0 +1,36 @@
+@mixin set-columns($numerator, $denominator, $offset) {
+  $width: percentage(($numerator / $denominator) * 0.8);
+  $gutter: percentage((1.0 / $denominator) * 0.2);
+  $left: (percentage((1.0 / $denominator) * 0.8)+$gutter) * $offset;
+  width: $width;
+  display: inline-block;
+  margin-right: $gutter;
+  margin-left: $left;
+}
+$column-totals:(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12);
+
+.row {
+  width: 100%;
+  display: block;
+}
+
+.row-no-right-margin {
+  display: inline !important;
+  .row-no-right-margin:last-child {
+    margin-right: 0;
+  }
+}
+
+
+@each $numerator in $column-totals {
+  @each $denominator in $column-totals {
+    .col--#{$numerator}-#{$denominator} {
+      @include set-columns($numerator, $denominator, 0);
+    }
+    @each $offset in $column-totals {
+      .col--#{$numerator}-#{$denominator}-offset-#{$offset} {
+	@include set-columns($numerator, $denominator, $offset);
+      }
+    }
+  }
+}

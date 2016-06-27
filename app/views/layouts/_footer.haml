@@ -1,16 +1,17 @@
-%footer#footer.row
-  %ul.dark-grey.inline-list.col--4-12-offset-6
-    %li
-      %a{href: "#"}
-        %i.fa.fa-facebook.icon
-    %li
-      %a{href: "#"}
-        %i.fa.fa-twitter
-    %li
-      %a{href: "#"}
-        %i.fa.fa-google-plus
-    %li
-      %a{href: "#"}
-        %i.fa.fa-pinterest-p
-  %small.col--3-12-offset-7
-    &copy; Copyright 2013, a Little Bit <sup>TM</sup>
+%footer(role="menu")
+  #footer.row
+    %ul.dark-grey.inline-list.col--4-12-offset-6.col--4-4
+      %li(aria-label="Visit our Facebook page" role="menuitem")
+        %a{href: "#"}
+          %i.fa.fa-facebook.icon
+      %li(aria-label="Follow us on Twitter" role="menuitem")
+        %a{href: "#"}
+          %i.fa.fa-twitter
+      %li(aria-label="Follow us on Google+" role="menuitem")
+        %a{href: "#"}
+          %i.fa.fa-google-plus
+      %li(aria-label="Add us on Pinterest" role="menuitem")
+        %a{href: "#"}
+          %i.fa.fa-pinterest-p
+    %div(aria-label="Copyright information")
+      %small.col--4-12-offset-3.col--mob-3-4-offset-1 &copy; Copyright 2013, a Little Bit <sup>TM</sup>

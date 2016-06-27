@@ -1,36 +1,40 @@
 %main(itemscope itemtype="https://schema.org/Book")
   .row
-    %h1.col--5-12-offset-2(itemprop="name")
+    %h1.col--5-12-offset-2.col--mob-2-4(itemprop="name")
       a Little Bit of <strong class="knowledge">knowledge</strong>
-    %em.secondary-colour.display-block.col--5-12-offset-2
+    %em.secondary-colour.display-block.col--5-12-offset-2.col--mob-4-4
       by Albert Einstein
     %section
       .row
-        = image_tag "a-little-bit_product-944x452.jpg", alt: "A Little Bit Product", class: "col--9-12-offset-2 stretch-image"
+        .col--9-12-offset-2.col--mob-4-4
+          %picture(aria-label="Product Image")
+            %source{media: "(min-width:1225px)", srcset: "/images/a-little-bit_product-944x452.jpg", alt: "A Little Bit Product"}
+            %source{media: "(min-width:960px)", srcset: "/images/book-group-medium.png"}
+            = image_tag "book-group-small.png", alt: "A Little Bit Product"
       %ul.inline-list.row
-        %li.formats.col--3-12-offset-4>
+        %li.col--3-12-offset-4.col--mob-4-4>
           .book-format.paperback
             %strong PAPERBACK
             £8.00 + Postage
-            %a{href: "#", class: "buy"} Buy
-        %li.col--3-12>
+            %a{href: "#", class: "buy pink-button"} Buy
+        %li.col--3-12.col--mob-4-4>
           .book-format.ebook
             %strong EBOOK
             £8.00 + Postage
-            %a{href: "#", class: "buy"} Buy
+            %a{href: "#", class: "buy pink-button"} Buy
     %article
       .row
-        %article.margin-no-top.col--6-12-offset-2>
+        %article.margin-no-top.col--6-12-offset-2.col--mob-4-4>
           %p
             Weakness of attitude becomes weakness of character, the hardest thing in the world to understand is the income tax. Imagination is more important than knowledge, science without religion is lame. Religion without science is blind, I never think of the future. It comes soon enough. The important thing is not to stop questioning. Curiosity has its own reason for existing.
           %p
-            Science without religion is lame. Religion without science is blind, E=mc².
+            Science without religion is lame. Religion without science is blind, <span aria-label="E equals M C squared">E=mc²</span>.
           %p
             The eternal mystery of the world is its comprehensibility, I want to know God's thoughts; the rest are details. I never think of the future. It comes soon enough. Weakness of attitude becomes weakness of character.  The only thing that interferes with my learning is my education, any intelligent fool can make things bigger, more complex, and more violent, great spirits have often encountered violent opposition from weak minds, the eternal mystery of the world is its comprehensibility. Weakness of attitude becomes weakness of character. 
           %p
             The secret to creativity is knowing how to hide your sources, the eternal mystery of the world is its comprehensibility. Imagination is more important than knowledge, reality is merely an illusion, albeit a very persistent one, I never think of the future. It comes soon enough.
-        %section.col--3-12>
-          %section#additional-info
+        %section.margin-no-top.col--3-12.col--mob-4-4>
+          %section#additional-info.margin-no-top
             %span.dark-grey Additional Info
             %p(itemprop="isbn")
               ISBN:
@@ -43,7 +47,7 @@
           %section.b-2-top.b-pink
             %h2(itemprop="author") About the Author
             %p
-              = image_tag "a-little-bit_author_91x119.jpg", class: "inline-image"
+              = image_tag "a-little-bit_author_91x119.jpg", alt: "Albert Einstein", class: "inline-image"
               %p.dark-grey Albert Einstein
               .dark-grey-small
                 Theoretical Physicist Albert Einstein was a German-born theoretical physicist who developed the general theory of relativity, one of the two pillars of modern physics.  
@@ -53,39 +57,39 @@
       
     %section
       .row
-        %h2.b-2-top.b-pink.col--9-12-offset-2.p-15-top
+        %h2.b-2-top.b-pink.col--9-12-offset-2.col--mob-4-4.p-15-top
           What people are saying
       .row
-        %blockquote.col--4-12-offset-2>
+        %blockquote.col--4-12-offset-2.col--mob-4-4>
           When the poet Paul Valery once asked Albert Einstein if he kept a notebook to record his ideas, Einstein looked at him with mild but genuine surprise. "Oh, that's not necessary," he replied . "It's so seldom I have one.  
           %cite
             Bill Bryson
-        %blockquote.col--4-12>
+        %blockquote.col--4-12.col--mob-4-4>
           So Einstein was wrong when he said, "God does not play dice." Consideration of black holes suggests, not only that God does play dice, but that he sometimes confuses us by throwing them where they can't be seen.
           %cite
             Stephen Hawking
 
   %aside
     .row
-      .aside-heading.b-2-top.b-pink.col--9-12-offset-2.p-15-top More Bits...
+      .aside-heading.b-2-top.b-pink.col--9-12-offset-2.col--mob-4-4.p-15-top More Bits...
     %ul.inline-list.row
-      %li.col--2-12-offset-2
+      %li.col--2-12-offset-2.col--mob-2-4
         .more-bits
           %a{href: "#"}
-            = image_tag "more-books.png"
+            = image_tag "more-books.png", alt: "More Books"
             .display-block a Little Bit more <strong>Knowledge</strong>
-      %li.col--2-12
+      %li.col--2-12.col--mob-2-4
         .more-bits
           %a{href: "#"}
-            = image_tag "more-books.png"
+            = image_tag "more-books.png", alt: "More Books"
             .display-block a Little Bit more <strong>Knowledge</strong>
-      %li.col--2-12
+      %li.col--2-12.col--mob-2-4
         .more-bits
           %a{href: "#"}
-          = image_tag "more-books.png"
+          = image_tag "more-books.png", alt: "More Books"
           .display-block a Little Bit more <strong>Knowledge</strong>
-      %li.col--2-12
+      %li.col--2-12.col--mob-2-4
         .more-bits
           %a{href: "#"}
-            = image_tag "more-books.png"
+            = image_tag "more-books.png", alt: "More Books"
             .display-block a Little Bit more <strong>Knowledge</strong>

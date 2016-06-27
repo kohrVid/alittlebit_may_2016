@@ -8,7 +8,7 @@ Alittlebit::App.controllers :books do
     render "index"
   end
 
-  get :index, map: "/books/index" do
+  get :index, map: "/books/" do
     @books = Book.all
     render "index"
   end

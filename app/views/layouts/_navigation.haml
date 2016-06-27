@@ -1,16 +1,16 @@
-%nav
-  .inline-list.col--4-12-offset-5>
+%nav(role="menu")
+  .inline-list.col--4-12-offset-5.col--mob-3-4>
     %ul
-      %li
+      %li(aria-label="Return to the homepage" role="menuitem")
         %a{href: "/"} HOME
-      %li
+      %li(aria-label="Browse products in our shop" role="menuitem")
         %a{href: "#"} SHOP
-      %li
+      %li(aria-label="Read the press release" role="menuitem")
         %a{href: "#"} PRESS
-      %li
+      %li(aria-label="About a Little Bit" role="menuitem")
         %a{href: "#"}  ABOUT
-      %li
+      %li(aria-labe="Get Help")
         %a{href: "#"}  HELP
-  %ul.col--1-12.inline-list
-    %li#shopping
+  %ul.col--mob-2-4-offset-2.col--1-12.inline-list(aria-label="Shopping cart.")
+    %li#shopping(aria-label="Total items:")
       %a{href: "#", class: "white-anchor-text"} 0

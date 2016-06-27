@@ -1,15 +1,17 @@
-= form_for @book, url_for(:books, :create) do |f|
+= form_for @book, url_for(:books, :create), role: "form" do |f|
+  - index = 1
   - Book.columns.map(&:name).each do |col|
     - unless ["id", "created_at", "updated_at"].include? col
       %fieldset
         %strong
-          = f.label col
+          = f.label col, id: col
         - if col == "published_on"
-          = f.date_field col, max: (Time.now + 3.years), value: Time.now
+          = f.date_field col, max: (Time.now + 3.years), value: Time.now, arialabelledby: col, tabindex: index
         - elsif col == "synopsis"
-          = f.text_area col
+          = f.text_area col, arialabelledby: col, tabindex: index
         - else
-          = f.text_field col
+          = f.text_field col, arialabelledby: col, tabindex: index
+      - index += 1
   %fieldset
-    = f.submit "Submit", class: "button"
+    = f.submit "Submit", class: "button", role: "button", tabindex: index
 

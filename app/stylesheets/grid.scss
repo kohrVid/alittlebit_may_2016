@@ -8,6 +8,7 @@
   margin-left: $left;
 }
 $column-totals:(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12);
+$mobile-column-totals:(1, 2, 3, 4);
 
 .row {
   width: 100%;
@@ -21,16 +22,49 @@ $column-totals:(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12);
   }
 }
 
-
-@each $numerator in $column-totals {
-  @each $denominator in $column-totals {
-    .col--#{$numerator}-#{$denominator} {
-      @include set-columns($numerator, $denominator, 0);
-    }
-    @each $offset in $column-totals {
-      .col--#{$numerator}-#{$denominator}-offset-#{$offset} {
-	@include set-columns($numerator, $denominator, $offset);
+@mixin desktop {
+  @each $numerator in $column-totals {
+    @each $denominator in (6, 8, 9, 10, 11, 12) {
+      .col--#{$numerator}-#{$denominator} {
+	@include set-columns($numerator, $denominator, 0);
+      }
+      $offset: 1;
+      @while $offset <= ($denominator - $numerator) {
+	.col--#{$numerator}-#{$denominator}-offset-#{$offset} {
+	  @include set-columns($numerator, $denominator, $offset);
+	}
+	$offset: $offset + 1;
       }
     }
   }
 }
+
+@mixin mobile {
+  @each $numerator in $mobile-column-totals {
+    @each $denominator in $mobile-column-totals {
+      .col--mob-#{$numerator}-#{$denominator} {
+	@include set-columns($numerator, $denominator, 0);
+	@if $numerator == $denominator{
+	  margin-left: 5% !important;
+	  margin-right: 0 !important;
+	}
+      }
+      $offset: 1;
+      @while $offset <= ($denominator - $numerator) {
+	.col--mob-#{$numerator}-#{$denominator}-offset-#{$offset} {
+	  @include set-columns($numerator, $denominator, $offset);
+	}
+	$offset: $offset + 1;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  @include desktop;
+}
+
+@media screen and (max-width: 1023px) {
+  @include mobile;
+}
+

@@ -16,13 +16,6 @@ $sans-serif: Arial, sans-serif;
   color: $pink;
 }
 
-@mixin inline-list {
-  list-style-type: none;
-  li {
-    display: inline-block;
-  }
-}
-
 body {
   border-top: 5px solid $primary-colour;
   font-family: $sans-serif;
@@ -40,10 +33,12 @@ body {
   .book-format {
     font-family: $sans-serif;
     font-size: 0.75em;
-    background-color: $light-grey;
-    background-image: url("/images/a-little-bit_icons_50x226.png");
-    background-size: 11%;
-    background-repeat: no-repeat;
+    background: {
+      color: $light-grey;
+      image: url("/images/a-little-bit_icons_50x226.png");
+      size: 11%;
+      repeat: no-repeat;
+    }
     height: 35px;
     width: 175px;
     padding: 5px 0 0 35px;
@@ -55,10 +50,6 @@ body {
       position: relative;
       top: -6px;
       left: 20px;
-      background-color: $pink;
-      color: white;
-      padding: 8px 17px;
-      border-radius: 5px;
     }
   }
   
@@ -70,12 +61,6 @@ body {
     margin-bottom: 10px;
   }
 }
-
-a:link,  a:visited,  a:hover,  a:active { 
-  color: $default-colour;
-  text-decoration: none;
-}
-
 
 .inline-image {
   display: inline;
@@ -100,14 +85,6 @@ a:link,  a:visited,  a:hover,  a:active {
 
 .stretch-image {
   img {
-    position: relative;
     width: 100%;
-  }
-}
-
-.more-bits {
-  img {
-   margin:auto;
-   text-align: center;
   }
 }

@@ -1,39 +1,20 @@
 /*
-Error: Undefined mixin 'quotation-font'.
-        on line 9 of /home/jessica/Documents/ruby/we_got_coders/assignments/alittlebit_may_2016/app/stylesheets/blockquote.scss, in `quotation-font'
-        from line 9 of /home/jessica/Documents/ruby/we_got_coders/assignments/alittlebit_may_2016/app/stylesheets/blockquote.scss
+Error: Undefined variable: "$pink".
+        on line 2 of /home/jessica/Documents/ruby/we_got_coders/assignments/alittlebit_may_2016/app/stylesheets/forms.scss
 
-4:   margin: 0.1em 3em;
-5:   padding: 1em 2em;
-6:   position:relative;
-7:   &:before {
-8:     content: "\201c";
-9:     @include quotation-font;
-10:     position: absolute;
-11:     left: 6px;
-12:     top: -7px;
-13:   }
-14:   &:after {
+1: .pink-button {
+2: background-color: $pink;
+3: color: white !important;
+4: padding: 8px 17px;
+5: border-radius: 5px;
+6: }
+7: 
 
 Backtrace:
-/home/jessica/Documents/ruby/we_got_coders/assignments/alittlebit_may_2016/app/stylesheets/blockquote.scss:9:in `quotation-font'
-/home/jessica/Documents/ruby/we_got_coders/assignments/alittlebit_may_2016/app/stylesheets/blockquote.scss:9
-/home/jessica/.rvm/gems/ruby-2.2.4/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:351:in `block in visit_mixin'
-/home/jessica/.rvm/gems/ruby-2.2.4/gems/sass-3.4.22/lib/sass/stack.rb:98:in `block in with_mixin'
-/home/jessica/.rvm/gems/ruby-2.2.4/gems/sass-3.4.22/lib/sass/stack.rb:115:in `with_frame'
-/home/jessica/.rvm/gems/ruby-2.2.4/gems/sass-3.4.22/lib/sass/stack.rb:98:in `with_mixin'
-/home/jessica/.rvm/gems/ruby-2.2.4/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:349:in `visit_mixin'
-/home/jessica/.rvm/gems/ruby-2.2.4/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:36:in `visit'
-/home/jessica/.rvm/gems/ruby-2.2.4/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:160:in `block in visit'
-/home/jessica/.rvm/gems/ruby-2.2.4/gems/sass-3.4.22/lib/sass/stack.rb:79:in `block in with_base'
-/home/jessica/.rvm/gems/ruby-2.2.4/gems/sass-3.4.22/lib/sass/stack.rb:115:in `with_frame'
-/home/jessica/.rvm/gems/ruby-2.2.4/gems/sass-3.4.22/lib/sass/stack.rb:79:in `with_base'
-/home/jessica/.rvm/gems/ruby-2.2.4/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:160:in `visit'
-/home/jessica/.rvm/gems/ruby-2.2.4/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:433:in `block (2 levels) in visit_rule'
-/home/jessica/.rvm/gems/ruby-2.2.4/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:433:in `map'
-/home/jessica/.rvm/gems/ruby-2.2.4/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:433:in `block in visit_rule'
-/home/jessica/.rvm/gems/ruby-2.2.4/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:181:in `with_environment'
-/home/jessica/.rvm/gems/ruby-2.2.4/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:431:in `visit_rule'
+/home/jessica/Documents/ruby/we_got_coders/assignments/alittlebit_may_2016/app/stylesheets/forms.scss:2
+/home/jessica/.rvm/gems/ruby-2.2.4/gems/sass-3.4.22/lib/sass/script/tree/variable.rb:49:in `_perform'
+/home/jessica/.rvm/gems/ruby-2.2.4/gems/sass-3.4.22/lib/sass/script/tree/node.rb:58:in `perform'
+/home/jessica/.rvm/gems/ruby-2.2.4/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:397:in `visit_prop'
 /home/jessica/.rvm/gems/ruby-2.2.4/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:36:in `visit'
 /home/jessica/.rvm/gems/ruby-2.2.4/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:160:in `block in visit'
 /home/jessica/.rvm/gems/ruby-2.2.4/gems/sass-3.4.22/lib/sass/stack.rb:79:in `block in with_base'
@@ -81,4 +62,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined mixin 'quotation-font'.\A         on line 9 of /home/jessica/Documents/ruby/we_got_coders/assignments/alittlebit_may_2016/app/stylesheets/blockquote.scss, in `quotation-font'\A         from line 9 of /home/jessica/Documents/ruby/we_got_coders/assignments/alittlebit_may_2016/app/stylesheets/blockquote.scss\A \A 4:   margin: 0.1em 3em;\A 5:   padding: 1em 2em;\A 6:   position:relative;\A 7:   &:before {\A 8:     content: \"\201c\";\A 9:     @include quotation-font;\A 10:     position: absolute;\A 11:     left: 6px;\A 12:     top: -7px;\A 13:   }\A 14:   &:after {"; }
+  content: "Error: Undefined variable: \"$pink\".\A         on line 2 of /home/jessica/Documents/ruby/we_got_coders/assignments/alittlebit_may_2016/app/stylesheets/forms.scss\A \A 1: .pink-button {\A 2: background-color: $pink;\A 3: color: white !important;\A 4: padding: 8px 17px;\A 5: border-radius: 5px;\A 6: }\A 7: "; }

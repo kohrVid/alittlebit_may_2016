@@ -1,6 +1,6 @@
 {
 "version": 3,
-"mappings": "AAAA,SAAU;EACR,WAAW,EAAE,IAAI;;AAGnB,cAAe;EACb,UAAU,EAAE,GAAG",
+"mappings": "AAAA,SAAU;EACR,WAAW,EAAE,IAAI;;AAGnB,cAAe;EACb,UAAU,EAAE,GAAG;;AAGjB,gBAAiB;EACf,YAAY,EAAE,CAAC;EACf,KAAK,EAAE,GAAG",
 "sources": ["../../app/stylesheets/padding.scss"],
 "names": [],
 "file": "padding.css"

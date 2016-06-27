@@ -23,21 +23,13 @@ body {
     body .book-format .buy {
       position: relative;
       top: -6px;
-      left: 20px;
-      background-color: #fb46ca;
-      color: white;
-      padding: 8px 17px;
-      border-radius: 5px; }
+      left: 20px; }
   body #additional-info {
     background-color: #d7d4d4;
     padding: 3px 10px;
     border-radius: 3px;
     font-size: 0.8em;
     margin-bottom: 10px; }
-
-a:link, a:visited, a:hover, a:active {
-  color: #010101;
-  text-decoration: none; }
 
 .inline-image {
   display: inline;
@@ -56,11 +48,6 @@ a:link, a:visited, a:hover, a:active {
   display: block; }
 
 .stretch-image img {
-  position: relative;
   width: 100%; }
-
-.more-bits img {
-  margin: auto;
-  text-align: center; }
 
 /*# sourceMappingURL=main.css.map */

@@ -23,7 +23,7 @@ h2, .aside-heading {
   color: #067c24;
   font-family: $serif;
   font-size: 1.2em;
-  top: -16px;
+/*  top: -16px;*/
 }
 
 .dark-grey {
@@ -40,4 +40,9 @@ h2, .aside-heading {
 
 .knowledge {
   font-size: 1.2em; 
+}
+
+a:link,  a:visited,  a:hover,  a:active { 
+  color: $default-colour;
+  text-decoration: none;
 }

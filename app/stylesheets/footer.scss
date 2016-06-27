@@ -1,5 +1,6 @@
 @import "main.scss";
 #footer {
+  padding-top: 0.1em;
   background-color: $medium-grey;
   color: white;
   i {
@@ -10,5 +11,8 @@
   }
   li {
     margin: 0 0.7em;
+  }
+  small {
+    top: -1em;
   }
 }

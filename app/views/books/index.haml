@@ -1,11 +1,37 @@
 %main(itemscope itemtype="https://schema.org/Book")
   .row
-    %h1.col--5-12-offset-2.col--mob-2-4
-      a Little Bit of <strong class="knowledge">KnowHow</strong>
-    %p
-      Insert carousel here
+    .col--9-12-offset-2.col--mob-4-4
+      #carousel.owl-carousel
+        .item#carousel-1
+          .slide
+            .circle-big
+              .circle-medium
+                .circle-small
+            .text
+              %h1
+                a Little Bit of <strong class="knowledge">KnowHow</strong>
+              %em.author-index.display-block.col--5-12.col--mob-4-4
+                by Albert Einstein
+              .row
+                %blockquote.blockquote-blue.col--4-12-offset-6
+                  When the poet Paul Valery once asked Albert Einstein if he kept a notebook to record his ideas, Einstein looked at him with mild but genuine surprise. "Oh, that's not necessary," he replied . "It's so seldom I have one.  
+                  %cite
+                    Bill Bryson
+                  %a{href: "#", class: "pink-button small-button display-block margin-no-right"} More
+            = image_tag "alb-blue.png", alt: "a Little Bit of KnowHow book cover", class: "col--4-12-offset-1"
+        .item#carousel-2
+          .slide
+            .circle-big
+              .circle-medium
+                .circle-small
+            .text
+              %h1
+                a Little Bit of <strong class="knowledge">KnowHow</strong>
+              .row
+                %blockquote.blockquote-blue.col--4-12-offset-6
+  %setion.index-section
     .row
-      %section.col--4-12-offset-2.col--mob-4-4
+      %article.col--4-12-offset-2.col--mob-4-4
         %h1 We launched our NEW Ebooks...
         = image_tag "", alt: "New Ebooks"
         .headline
@@ -21,15 +47,25 @@
 
   %aside
     .row
-      .aside-heading.b-2-top.b-pink.col--9-12-offset-2.col--mob-4-4.p-15-top More Bits...
+      .aside-heading.dark-grey.b-2-top.b-pink.col--9-12-offset-2.col--mob-4-4.p-15-top More Bits...
     %ul.inline-list.row
-      %li.col--4-12-offset-2.col--mob-4-4
-        .more-bits
-          %a{href: "#"}
-            = image_tag "more-books.png", alt: "More Books"
-            .display-block a Little Bit more <strong>Knowledge</strong>
-      %li.col--4-12.col--mob-4-4
-        .more-bits
-          %a{href: "#"}
-            = image_tag "more-books.png", alt: "More Books"
-            .display-block a Little Bit more <strong>Knowledge</strong>
+      %li.light-grey-box.col--4-12-offset-2.col--mob-4-4
+        .row.more-bits
+          .stretch-image.col--3-6.col--mob-2-4>
+            %a{href: "#"}
+              = image_tag "alb-purple.png", alt: "More Books"
+          .col--3-6.col--mob-2-4.margin-no-top
+            .aside-heading
+              a Little Bit more <strong>Knowledge</strong>
+            %p
+              world is its comprehensibility, I want to know God's thoughts; the rest are details. I never think of the future. It comes soon enough. Weakness of attitude becomes weakness of character.  
+      %li.light-grey-box.col--4-12.col--mob-4-4
+        .row.more-bits
+          .stretch-image.col--3-6.col--mob-2-4>
+            %a{href: "#"}
+              = image_tag "alb-red.png", alt: "More Books"
+          .col--3-6.col--mob-2-4.margin-no-top
+            .aside-heading
+              a Little Bit more <strong>Knowledge</strong>
+            %p
+              world is its comprehensibility, I want to know God's thoughts; the rest are details. I never think of the future. It comes soon enough. Weakness of attitude becomes weakness of character.  

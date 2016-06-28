@@ -31,6 +31,16 @@ body {
     font-size: 0.8em;
     margin-bottom: 10px; }
 
+.light-grey-box {
+  background-color: #d7d4d4;
+  padding: 1em 0.7em;
+  border-radius: 3px; }
+  .light-grey-box div {
+    vertical-align: top; }
+    .light-grey-box div img {
+      position: relative;
+      top: 0; }
+
 .inline-image {
   display: inline;
   float: left;

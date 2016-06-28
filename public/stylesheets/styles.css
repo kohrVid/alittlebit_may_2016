@@ -2106,6 +2106,16 @@ body {
     font-size: 0.8em;
     margin-bottom: 10px; }
 
+.light-grey-box {
+  background-color: #d7d4d4;
+  padding: 1em 0.7em;
+  border-radius: 3px; }
+  .light-grey-box div {
+    vertical-align: top; }
+    .light-grey-box div img {
+      position: relative;
+      top: 0; }
+
 .inline-image {
   display: inline;
   float: left;
@@ -2170,6 +2180,16 @@ body {
     border-radius: 3px;
     font-size: 0.8em;
     margin-bottom: 10px; }
+
+.light-grey-box {
+  background-color: #d7d4d4;
+  padding: 1em 0.7em;
+  border-radius: 3px; }
+  .light-grey-box div {
+    vertical-align: top; }
+    .light-grey-box div img {
+      position: relative;
+      top: 0; }
 
 .inline-image {
   display: inline;
@@ -2238,6 +2258,16 @@ body {
     font-size: 0.8em;
     margin-bottom: 10px; }
 
+.light-grey-box {
+  background-color: #d7d4d4;
+  padding: 1em 0.7em;
+  border-radius: 3px; }
+  .light-grey-box div {
+    vertical-align: top; }
+    .light-grey-box div img {
+      position: relative;
+      top: 0; }
+
 .inline-image {
   display: inline;
   float: left;
@@ -2289,6 +2319,16 @@ body {
     border-radius: 3px;
     font-size: 0.8em;
     margin-bottom: 10px; }
+
+.light-grey-box {
+  background-color: #d7d4d4;
+  padding: 1em 0.7em;
+  border-radius: 3px; }
+  .light-grey-box div {
+    vertical-align: top; }
+    .light-grey-box div img {
+      position: relative;
+      top: 0; }
 
 .inline-image {
   display: inline;
@@ -2371,6 +2411,16 @@ body {
     font-size: 0.8em;
     margin-bottom: 10px; }
 
+.light-grey-box {
+  background-color: #d7d4d4;
+  padding: 1em 0.7em;
+  border-radius: 3px; }
+  .light-grey-box div {
+    vertical-align: top; }
+    .light-grey-box div img {
+      position: relative;
+      top: 0; }
+
 .inline-image {
   display: inline;
   float: left;
@@ -2402,29 +2452,54 @@ blockquote {
   margin: 0.1em 3em;
   padding: 1em 2em;
   position: relative; }
-  blockquote:before {
-    content: "\201c";
-    font-size: 3em;
-    font-weight: bold;
-    font-family: "Times New Roman", times, serif;
-    color: #fb46ca;
-    position: absolute;
-    left: 6px;
-    top: -7px; }
-  blockquote:after {
-    content: "\201d";
-    font-size: 3em;
-    font-weight: bold;
-    font-family: "Times New Roman", times, serif;
-    color: #fb46ca;
-    position: absolute;
-    right: 11px;
-    bottom: -7px; }
-  blockquote cite {
-    display: block;
-    font-weight: bold;
-    padding: 1em 0;
-    color: #fb46ca; }
+
+.blockquote-pink:before {
+  content: "\201c";
+  font-size: 3em;
+  font-weight: bold;
+  font-family: "Times New Roman", times, serif;
+  color: #fb46ca;
+  position: absolute;
+  left: 6px;
+  top: -7px; }
+.blockquote-pink:after {
+  content: "\201d";
+  font-size: 3em;
+  font-weight: bold;
+  font-family: "Times New Roman", times, serif;
+  color: #fb46ca;
+  position: absolute;
+  right: 11px;
+  bottom: -7px; }
+.blockquote-pink cite {
+  display: block;
+  font-weight: bold;
+  padding: 1em 0;
+  color: #fb46ca; }
+
+.blockquote-blue:before {
+  content: "\201c";
+  font-size: 3em;
+  font-weight: bold;
+  font-family: "Times New Roman", times, serif;
+  color: #0752a7;
+  position: absolute;
+  left: 6px;
+  top: -7px; }
+.blockquote-blue:after {
+  content: "\201d";
+  font-size: 3em;
+  font-weight: bold;
+  font-family: "Times New Roman", times, serif;
+  color: #0752a7;
+  position: absolute;
+  right: 11px;
+  bottom: -7px; }
+.blockquote-blue cite {
+  display: block;
+  font-weight: bold;
+  padding: 1em 0;
+  color: #0752a7; }
 
 body {
   border-top: 5px solid #52cbb3;
@@ -2458,6 +2533,16 @@ body {
     border-radius: 3px;
     font-size: 0.8em;
     margin-bottom: 10px; }
+
+.light-grey-box {
+  background-color: #d7d4d4;
+  padding: 1em 0.7em;
+  border-radius: 3px; }
+  .light-grey-box div {
+    vertical-align: top; }
+    .light-grey-box div img {
+      position: relative;
+      top: 0; }
 
 .inline-image {
   display: inline;
@@ -2495,17 +2580,23 @@ h2, .aside-heading {
 .secondary-colour {
   color: #067c24;
   font-family: "Times New Roman", times, serif;
-  font-size: 1.2em;
-  /*  top: -16px;*/ }
+  font-size: 1.2em; }
 
 .dark-grey {
-  color: #6c6c6c;
+  color: #6c6c6c; }
+
+.medium-font {
   font-weight: bold;
   font-size: 1em; }
 
-.dark-grey-small {
-  color: #6c6c6c;
+.small-font {
   font-size: 0.8em; }
+
+.author-index {
+  font-family: "Times New Roman", times, serif;
+  font-size: 1.2em;
+  position: relative;
+  top: -0.9em; }
 
 .knowledge {
   font-size: 1.2em; }
@@ -2521,8 +2612,9 @@ a:link, a:visited, a:hover, a:active {
   margin-top: 0px; }
 
 .margin-no-right {
+  position: relative;
   margin-right: 0;
-  right: 0px; }
+  right: -3em; }
 
 .pink-button {
   background-color: #fb46ca;
@@ -2535,5 +2627,73 @@ a:link, a:visited, a:hover, a:active {
   margin: auto;
   width: 3.7em;
   text-align: center; }
+
+.owl-wrapper-outer {
+  height: 31em !important;
+  margin: 0;
+  top: 0;
+  /*  width: 100% !important;*/ }
+
+#carousel {
+  height: 36em !important;
+  margin: auto;
+  width: 100%; }
+  #carousel div {
+    position: relative !important; }
+    #carousel div .slide {
+      position: absolute;
+      padding: 1em 2em;
+      top: 0em;
+      left: 0;
+      height: 25em; }
+      #carousel div .slide .text {
+        position: absolute;
+        top: -36em; }
+
+#carousel-1 .slide {
+  background-color: #0089c2;
+  color: #fff; }
+#carousel-1 img {
+  position: absolute;
+  top: 6em;
+  left: 0;
+  width: 36%; }
+
+#carousel-2 .slide {
+  background-color: #ff89c2;
+  color: #fff; }
+
+.circle-big {
+  background-color: rgba(255, 255, 255, 0.21);
+  /*  position: absolute;*/
+  width: 34em;
+  height: 34em;
+  border-radius: 50%;
+  /*top: -2em;*/
+  top: -6em;
+  left: -5em;
+  padding: 1em; }
+
+.circle-medium {
+  background-color: rgba(255, 255, 255, 0.21);
+  position: absolute;
+  width: 19em;
+  height: 19em;
+  border-radius: 50%;
+  top: 6em;
+  left: 7em; }
+
+.circle-small {
+  background-color: rgba(255, 255, 255, 0.21);
+  position: absolute;
+  width: 12em;
+  height: 12em;
+  border-radius: 50%;
+  top: 3em;
+  left: 3em; }
+
+.index-section {
+  top: -7em;
+  position: relative; }
 
 /*# sourceMappingURL=styles.css.map */

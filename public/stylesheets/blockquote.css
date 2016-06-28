@@ -1,39 +1,32 @@
 /*
-Error: Undefined mixin 'quotation-font'.
-        on line 9 of /home/jessica/Documents/ruby/we_got_coders/assignments/alittlebit_may_2016/app/stylesheets/blockquote.scss, in `quotation-font'
-        from line 9 of /home/jessica/Documents/ruby/we_got_coders/assignments/alittlebit_may_2016/app/stylesheets/blockquote.scss
+Error: Undefined variable: "$pink".
+        on line 46 of /home/jessica/Documents/ruby/we_got_coders/assignments/alittlebit_may_2016/app/stylesheets/blockquote.scss, in `quote-pseudo-element'
+        from line 46 of /home/jessica/Documents/ruby/we_got_coders/assignments/alittlebit_may_2016/app/stylesheets/blockquote.scss
 
-4:   margin: 0.1em 3em;
-5:   padding: 1em 2em;
-6:   position:relative;
-7:   &:before {
-8:     content: "\201c";
-9:     @include quotation-font;
-10:     position: absolute;
-11:     left: 6px;
-12:     top: -7px;
-13:   }
-14:   &:after {
+41:   padding: 1em 2em;
+42:   position:relative;
+43: }
+44: 
+45: .blockquote-pink {
+46:   @include quote-pseudo-element($pink);
+47: }
+48: 
+49: .blockquote-blue {
+50:   @include quote-pseudo-element($dark-blue);
+51: }
 
 Backtrace:
-/home/jessica/Documents/ruby/we_got_coders/assignments/alittlebit_may_2016/app/stylesheets/blockquote.scss:9:in `quotation-font'
-/home/jessica/Documents/ruby/we_got_coders/assignments/alittlebit_may_2016/app/stylesheets/blockquote.scss:9
-/home/jessica/.rvm/gems/ruby-2.2.4/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:351:in `block in visit_mixin'
+/home/jessica/Documents/ruby/we_got_coders/assignments/alittlebit_may_2016/app/stylesheets/blockquote.scss:46:in `quote-pseudo-element'
+/home/jessica/Documents/ruby/we_got_coders/assignments/alittlebit_may_2016/app/stylesheets/blockquote.scss:46
+/home/jessica/.rvm/gems/ruby-2.2.4/gems/sass-3.4.22/lib/sass/script/tree/variable.rb:49:in `_perform'
+/home/jessica/.rvm/gems/ruby-2.2.4/gems/sass-3.4.22/lib/sass/script/tree/node.rb:58:in `perform'
+/home/jessica/.rvm/gems/ruby-2.2.4/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:357:in `block (2 levels) in visit_mixin'
+/home/jessica/.rvm/gems/ruby-2.2.4/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:357:in `map'
+/home/jessica/.rvm/gems/ruby-2.2.4/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:357:in `block in visit_mixin'
 /home/jessica/.rvm/gems/ruby-2.2.4/gems/sass-3.4.22/lib/sass/stack.rb:98:in `block in with_mixin'
 /home/jessica/.rvm/gems/ruby-2.2.4/gems/sass-3.4.22/lib/sass/stack.rb:115:in `with_frame'
 /home/jessica/.rvm/gems/ruby-2.2.4/gems/sass-3.4.22/lib/sass/stack.rb:98:in `with_mixin'
 /home/jessica/.rvm/gems/ruby-2.2.4/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:349:in `visit_mixin'
-/home/jessica/.rvm/gems/ruby-2.2.4/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:36:in `visit'
-/home/jessica/.rvm/gems/ruby-2.2.4/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:160:in `block in visit'
-/home/jessica/.rvm/gems/ruby-2.2.4/gems/sass-3.4.22/lib/sass/stack.rb:79:in `block in with_base'
-/home/jessica/.rvm/gems/ruby-2.2.4/gems/sass-3.4.22/lib/sass/stack.rb:115:in `with_frame'
-/home/jessica/.rvm/gems/ruby-2.2.4/gems/sass-3.4.22/lib/sass/stack.rb:79:in `with_base'
-/home/jessica/.rvm/gems/ruby-2.2.4/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:160:in `visit'
-/home/jessica/.rvm/gems/ruby-2.2.4/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:433:in `block (2 levels) in visit_rule'
-/home/jessica/.rvm/gems/ruby-2.2.4/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:433:in `map'
-/home/jessica/.rvm/gems/ruby-2.2.4/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:433:in `block in visit_rule'
-/home/jessica/.rvm/gems/ruby-2.2.4/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:181:in `with_environment'
-/home/jessica/.rvm/gems/ruby-2.2.4/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:431:in `visit_rule'
 /home/jessica/.rvm/gems/ruby-2.2.4/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:36:in `visit'
 /home/jessica/.rvm/gems/ruby-2.2.4/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:160:in `block in visit'
 /home/jessica/.rvm/gems/ruby-2.2.4/gems/sass-3.4.22/lib/sass/stack.rb:79:in `block in with_base'
@@ -81,4 +74,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined mixin 'quotation-font'.\A         on line 9 of /home/jessica/Documents/ruby/we_got_coders/assignments/alittlebit_may_2016/app/stylesheets/blockquote.scss, in `quotation-font'\A         from line 9 of /home/jessica/Documents/ruby/we_got_coders/assignments/alittlebit_may_2016/app/stylesheets/blockquote.scss\A \A 4:   margin: 0.1em 3em;\A 5:   padding: 1em 2em;\A 6:   position:relative;\A 7:   &:before {\A 8:     content: \"\201c\";\A 9:     @include quotation-font;\A 10:     position: absolute;\A 11:     left: 6px;\A 12:     top: -7px;\A 13:   }\A 14:   &:after {"; }
+  content: "Error: Undefined variable: \"$pink\".\A         on line 46 of /home/jessica/Documents/ruby/we_got_coders/assignments/alittlebit_may_2016/app/stylesheets/blockquote.scss, in `quote-pseudo-element'\A         from line 46 of /home/jessica/Documents/ruby/we_got_coders/assignments/alittlebit_may_2016/app/stylesheets/blockquote.scss\A \A 41:   padding: 1em 2em;\A 42:   position:relative;\A 43: }\A 44: \A 45: .blockquote-pink {\A 46:   @include quote-pseudo-element($pink);\A 47: }\A 48: \A 49: .blockquote-blue {\A 50:   @include quote-pseudo-element($dark-blue);\A 51: }"; }

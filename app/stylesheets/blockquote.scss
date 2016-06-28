@@ -1,28 +1,52 @@
-blockquote {
-  display: table-cell;
-  width: 40%;
-  margin: 0.1em 3em;
-  padding: 1em 2em;
-  position:relative;
+@mixin quotation-font ($colour){
+  font: {
+    size: 3em;
+    weight: bold;
+    family: $serif;
+  }
+  color: $colour;
+}
+
+@mixin citation($colour) {
+  cite{
+    display: block;
+    font-weight: bold;
+    padding: 1em 0;
+    color: $colour;
+  }
+}
+
+@mixin quote-pseudo-element($colour) {
   &:before {
     content: "\201c";
-    @include quotation-font;
+    @include quotation-font($colour);
     position: absolute;
     left: 6px;
     top: -7px;
   }
   &:after {
     content: "\201d";
-    @include quotation-font;
+    @include quotation-font($colour);
     position: absolute;
     right: 11px;
     bottom: -7px;
   }
-  cite{
-    display: block;
-    font-weight: bold;
-    padding: 1em 0;
-    color: $pink;
-  }
+  @include citation($colour)
+}
+
+blockquote {
+  display: table-cell;
+  width: 40%;
+  margin: 0.1em 3em;
+  padding: 1em 2em;
+  position:relative;
+}
+
+.blockquote-pink {
+  @include quote-pseudo-element($pink);
+}
+
+.blockquote-blue {
+  @include quote-pseudo-element($dark-blue);
 }
 

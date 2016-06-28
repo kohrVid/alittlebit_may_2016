@@ -23,19 +23,26 @@ h2, .aside-heading {
   color: #067c24;
   font-family: $serif;
   font-size: 1.2em;
-/*  top: -16px;*/
 }
 
 .dark-grey {
   color: $dark-grey;
+}
+.medium-font {
   font: {
     weight: bold;
     size: 1em;
   }
 }
-.dark-grey-small {
-  color: $dark-grey;
+.small-font {
   font-size: 0.8em;
+}
+
+.author-index {
+  font-family: $serif;
+  font-size: 1.2em;
+  position: relative;
+  top: -0.9em;
 }
 
 .knowledge {

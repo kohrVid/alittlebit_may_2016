@@ -1,0 +1,69 @@
+.owl-wrapper-outer {
+  height: 31em !important;
+  margin: 0;
+  top: 0;
+  /*  width: 100% !important;*/ }
+
+#carousel {
+  height: 36em !important;
+  margin: auto;
+  width: 100%; }
+  #carousel div {
+    position: relative !important; }
+    #carousel div .slide {
+      position: absolute;
+      padding: 1em 2em;
+      top: 0em;
+      left: 0;
+      height: 25em; }
+      #carousel div .slide .text {
+        position: absolute;
+        top: -36em; }
+
+#carousel-1 .slide {
+  background-color: #0089c2;
+  color: #fff; }
+#carousel-1 img {
+  position: absolute;
+  top: 6em;
+  left: 0;
+  width: 36%; }
+
+#carousel-2 .slide {
+  background-color: #ff89c2;
+  color: #fff; }
+
+.circle-big {
+  background-color: rgba(255, 255, 255, 0.21);
+  /*  position: absolute;*/
+  width: 34em;
+  height: 34em;
+  border-radius: 50%;
+  /*top: -2em;*/
+  top: -6em;
+  left: -5em;
+  padding: 1em; }
+
+.circle-medium {
+  background-color: rgba(255, 255, 255, 0.21);
+  position: absolute;
+  width: 19em;
+  height: 19em;
+  border-radius: 50%;
+  top: 6em;
+  left: 7em; }
+
+.circle-small {
+  background-color: rgba(255, 255, 255, 0.21);
+  position: absolute;
+  width: 12em;
+  height: 12em;
+  border-radius: 50%;
+  top: 3em;
+  left: 3em; }
+
+.index-section {
+  top: -7em;
+  position: relative; }
+
+/*# sourceMappingURL=carousel.css.map */

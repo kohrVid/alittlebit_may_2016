@@ -31,6 +31,16 @@ body {
     font-size: 0.8em;
     margin-bottom: 10px; }
 
+.light-grey-box {
+  background-color: #d7d4d4;
+  padding: 1em 0.7em;
+  border-radius: 3px; }
+  .light-grey-box div {
+    vertical-align: top; }
+    .light-grey-box div img {
+      position: relative;
+      top: 0; }
+
 .inline-image {
   display: inline;
   float: left;
@@ -67,17 +77,23 @@ h2, .aside-heading {
 .secondary-colour {
   color: #067c24;
   font-family: "Times New Roman", times, serif;
-  font-size: 1.2em;
-  /*  top: -16px;*/ }
+  font-size: 1.2em; }
 
 .dark-grey {
-  color: #6c6c6c;
+  color: #6c6c6c; }
+
+.medium-font {
   font-weight: bold;
   font-size: 1em; }
 
-.dark-grey-small {
-  color: #6c6c6c;
+.small-font {
   font-size: 0.8em; }
+
+.author-index {
+  font-family: "Times New Roman", times, serif;
+  font-size: 1.2em;
+  position: relative;
+  top: -0.9em; }
 
 .knowledge {
   font-size: 1.2em; }

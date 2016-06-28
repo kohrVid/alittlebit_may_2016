@@ -4,17 +4,10 @@ $medium-grey: #aea9a9;
 $dark-grey: #6c6c6c;
 $light-grey: #d7d4d4;
 $pink: #fb46ca;
+$powder-blue: #bdddea;
+$dark-blue: #0752a7;
 $serif: "Times New Roman", times, serif;
 $sans-serif: Arial, sans-serif;
-
-@mixin quotation-font {
-  font: {
-    size: 3em;
-    weight: bold;
-    family: $serif;
-  }
-  color: $pink;
-}
 
 body {
   border-top: 5px solid $primary-colour;
@@ -59,6 +52,18 @@ body {
     border-radius: 3px;
     font-size: 0.8em;
     margin-bottom: 10px;
+  }
+}
+.light-grey-box {
+  background-color: $light-grey;
+  padding: 1em 0.7em;
+  border-radius: 3px;
+  div {
+    vertical-align: top;
+    img{
+      position: relative;
+      top: 0;
+    }
   }
 }
 

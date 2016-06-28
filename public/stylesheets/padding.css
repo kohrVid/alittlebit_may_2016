@@ -5,7 +5,8 @@
   margin-top: 0px; }
 
 .margin-no-right {
+  position: relative;
   margin-right: 0;
-  right: 0px; }
+  right: -3em; }
 
 /*# sourceMappingURL=padding.css.map */

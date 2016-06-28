@@ -2,16 +2,11 @@
   height: 31em !important;
   margin: 0;
   top: 0;
-/*  width: 100% !important;*/
-  //  overflow-x: hidden;
 }
 #carousel {
   height: 36em !important;
   margin: auto;
   width: 100%;
-  > div {
-    //overflow-y: initial !important;
-  }
    div {
     position: relative !important;
     .slide {
@@ -51,11 +46,9 @@
 
 .circle-big{
   background-color: rgba(255,255,255,0.21);
-/*  position: absolute;*/
   width: 34em;
   height: 34em;
   border-radius: 50%;
-  /*top: -2em;*/
   top: -6em;
   left: -5em;
   padding: 1em;

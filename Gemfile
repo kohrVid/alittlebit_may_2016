@@ -25,7 +25,7 @@ gem 'pg'
 # Test requirements
 gem 'database_cleaner', :group => 'test'
 gem 'mocha', :group => 'test', :require => false
-gem 'minitest', :require => 'minitest/autorun', :group => 'test'
+gem 'minitest', :require => ['minitest/autorun', 'minitest/pride'], :group => 'test'
 gem 'rack-test', :require => 'rack/test', :group => 'test'
 
 # Padrino Stable Gem

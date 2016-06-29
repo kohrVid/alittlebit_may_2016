@@ -5,8 +5,6 @@ class CreateBooks < ActiveRecord::Migration
       t.string :isbn
       t.text :synopsis
       t.date :published_on
-      t.string :author
-      t.string :genre
       t.timestamps null: false
     end
   end

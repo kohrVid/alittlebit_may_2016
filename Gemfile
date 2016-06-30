@@ -27,6 +27,7 @@ gem 'database_cleaner', :group => 'test'
 gem 'mocha', :group => 'test', :require => false
 gem 'minitest', :require => ['minitest/autorun', 'minitest/pride'], :group => 'test'
 gem 'rack-test', :require => 'rack/test', :group => 'test'
+gem "simplecov", group: "test"
 
 # Padrino Stable Gem
 gem 'padrino', '0.13.2'

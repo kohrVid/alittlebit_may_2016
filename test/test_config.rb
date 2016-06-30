@@ -4,6 +4,8 @@ require 'mocha/api'
 Dir[File.expand_path(File.dirname(__FILE__) + "/../app/helpers/**/*.rb")].each(&method(:require))
 Dir["./test/helpers/*.rb"].each {|file| require file }
 require "database_cleaner"
+require 'simplecov'
+SimpleCov.start
 
 class MiniTest::Spec
   include Mocha::API

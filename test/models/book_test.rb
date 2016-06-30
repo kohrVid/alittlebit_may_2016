@@ -1,9 +1,8 @@
 require File.expand_path(File.dirname(__FILE__) + '/../test_config.rb')
 describe "Book" do
   before do
-    @author = Author.create(AuthorHelper.author.attributes)
-    @valid_book = { title: "A Little Bit of Knowledge", isbn: "978-1-93775571-0-2", synopsis: "Weakness of attitude becomes weakness of character...", published_on: Time.now, authors: [@author] }
-    @other_book = { title: "A Little Bit of KnowHow", isbn: "978-1-93775571-0-1", synopsis: "Oh, that's not necessary. It's so seldom I  have one.", published_on: (Time.now-1.day), authors: [@author] }
+    @valid_book = BookHelper.book
+    @other_book = BookHelper.other_book
   end
 
   it "should create an instance of a valid book" do

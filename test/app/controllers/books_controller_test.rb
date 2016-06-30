@@ -1,17 +1,6 @@
 require File.expand_path(File.dirname(__FILE__) + '/../../test_config.rb')
-=begin
-describe "/books" do
-  before do
-    get "/books"
-  end
 
-  it "should return hello world text" do
-    assert_equal "Hello World", last_response.body
-  end
-end
-=end
-
-describe "GET to new" do
+describe "GET new" do
   before do
     get "/books/new"
   end
@@ -22,14 +11,10 @@ describe "GET to new" do
 
   describe "POST to /books" do
     before do
-      @params = {
-	title: "The Epic of Gilgamesh",
-	isbn: "hbjbjkhj8676383",
-	synopsis: "Gilgamesh makes a new friend.",
-	author: "An ancient Sumerian person",
-	published_on: Date.new(1990, 01, 01),
-	genre: "Mythology"
-      }
+      @params = {}
+      @params[:book]= BookHelper.book
+      @params[:book].delete(:authors)
+      @params[:authors] = BookHelper.book[:authors].map{ |author| author.id }
     end
 
     it "should post a book" do
@@ -37,6 +22,33 @@ describe "GET to new" do
       post "/books/", @params
       last_response.redirect?
       Book.all.count.must_equal count + 1
+    end
+  end
+end
+
+describe "GET edit" do
+  before do
+    @book = Book.create(BookHelper.book)
+    get "/books/#{@book.id}/edit"
+  end
+
+  it "should give a 200 OK" do
+    last_response.status.must_equal 200
+  end
+
+  describe "PUT to /books/:id" do
+    before do
+      @other_author = Author.create(AuthorHelper.mononym.attributes)
+      @params = {}
+      @params[:book] = BookHelper.book
+      @params[:book].delete(:authors)
+      @params[:authors] = [@other_author.id]
+    end
+
+    it "should update a book" do
+      put "/books/#{@book.id}", @params
+      last_response.redirect?
+      @book.authors.must_include @other_author
     end
   end
 end

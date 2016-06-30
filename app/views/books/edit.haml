@@ -1,0 +1,6 @@
+%main.row
+  .col--9-12-offset-2.col--mob-4-4
+    %h1 Edit #{@book.title}
+    = form_for @book, url_for(:books, :update, id: @book.id),role: "form" do |f|
+      %input{ type: "hidden", name: "_method", value: "put" }
+      = partial "books/form", locals: { f: f }

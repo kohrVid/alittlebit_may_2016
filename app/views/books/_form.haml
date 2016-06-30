@@ -1,17 +1,28 @@
-= form_for @book, url_for(:books, :create), role: "form" do |f|
-  - index = 1
-  - Book.columns.map(&:name).each do |col|
-    - unless ["id", "created_at", "updated_at"].include? col
-      %fieldset
-        %strong
-          = f.label col, id: col
-        - if col == "published_on"
-          = f.date_field col, max: (Time.now + 3.years), value: Time.now, arialabelledby: col, tabindex: index
-        - elsif col == "synopsis"
-          = f.text_area col, arialabelledby: col, tabindex: index
-        - else
-          = f.text_field col, arialabelledby: col, tabindex: index
-      - index += 1
-  %fieldset
-    = f.submit "Submit", class: "button", role: "button", tabindex: index
-
+- index = 1
+- Book.columns.map(&:name).each do |col|
+  - unless ["id", "created_at", "updated_at"].include? col
+    %fieldset
+      %strong
+        = f.label col, id: col
+      - if col == "published_on"
+        = f.date_field col, max: (Time.now + 3.years), value: Time.now, "aria-labelledby": col, tabindex: index
+      - elsif col == "synopsis"
+        = f.text_area col, "aria-labelledby": col, tabindex: index
+      - else
+        = f.text_field col, "aria-labelledby": col, tabindex: index
+    - index += 1
+%fieldset
+  %strong
+    = f.label :authors, id: "authors"
+  -# f.select :authors, collection: Author.all, fields: [:full_name, :id], multiple: true, tabindex: index
+  %select#book_authors{ tabindex: index, multiple: "multiple", name: "authors[]" }
+    - Author.all.each do |author|
+      - if @book.authors.include? author
+        %option{ value: author.id, selected: "selected" }
+          = author.full_name
+      - else
+        %option{ value: author.id }
+          = author.full_name
+  - index += 1
+%fieldset
+  = f.submit "Submit", class: "button", role: "button", tabindex: index

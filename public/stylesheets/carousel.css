@@ -1,8 +1,7 @@
 .owl-wrapper-outer {
   height: 31em !important;
   margin: 0;
-  top: 0;
-  /*  width: 100% !important;*/ }
+  top: 0; }
 
 #carousel {
   height: 36em !important;
@@ -35,11 +34,9 @@
 
 .circle-big {
   background-color: rgba(255, 255, 255, 0.21);
-  /*  position: absolute;*/
   width: 34em;
   height: 34em;
   border-radius: 50%;
-  /*top: -2em;*/
   top: -6em;
   left: -5em;
   padding: 1em; }

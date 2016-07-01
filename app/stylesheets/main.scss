@@ -53,7 +53,12 @@ body {
     font-size: 0.8em;
     margin-bottom: 10px;
   }
+
+  main {
+    padding-bottom: 1em;
+  }
 }
+
 .light-grey-box {
   background-color: $light-grey;
   padding: 1em 0.7em;

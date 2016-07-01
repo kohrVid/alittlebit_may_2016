@@ -53,3 +53,8 @@ a:link,  a:visited,  a:hover,  a:active {
   color: $default-colour;
   text-decoration: none;
 }
+
+.inline-link {
+  color: $pink !important;
+  text-decoration: underline !important;
+}

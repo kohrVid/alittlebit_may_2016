@@ -30,6 +30,8 @@ body {
     border-radius: 3px;
     font-size: 0.8em;
     margin-bottom: 10px; }
+  body main {
+    padding-bottom: 1em; }
 
 .light-grey-box {
   background-color: #d7d4d4;
@@ -101,5 +103,9 @@ h2, .aside-heading {
 a:link, a:visited, a:hover, a:active {
   color: #010101;
   text-decoration: none; }
+
+.inline-link {
+  color: #fb46ca !important;
+  text-decoration: underline !important; }
 
 /*# sourceMappingURL=font.css.map */

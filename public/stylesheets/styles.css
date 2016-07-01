@@ -2105,6 +2105,8 @@ body {
     border-radius: 3px;
     font-size: 0.8em;
     margin-bottom: 10px; }
+  body main {
+    padding-bottom: 1em; }
 
 .light-grey-box {
   background-color: #d7d4d4;
@@ -2180,6 +2182,8 @@ body {
     border-radius: 3px;
     font-size: 0.8em;
     margin-bottom: 10px; }
+  body main {
+    padding-bottom: 1em; }
 
 .light-grey-box {
   background-color: #d7d4d4;
@@ -2257,6 +2261,8 @@ body {
     border-radius: 3px;
     font-size: 0.8em;
     margin-bottom: 10px; }
+  body main {
+    padding-bottom: 1em; }
 
 .light-grey-box {
   background-color: #d7d4d4;
@@ -2319,6 +2325,8 @@ body {
     border-radius: 3px;
     font-size: 0.8em;
     margin-bottom: 10px; }
+  body main {
+    padding-bottom: 1em; }
 
 .light-grey-box {
   background-color: #d7d4d4;
@@ -2410,6 +2418,8 @@ body {
     border-radius: 3px;
     font-size: 0.8em;
     margin-bottom: 10px; }
+  body main {
+    padding-bottom: 1em; }
 
 .light-grey-box {
   background-color: #d7d4d4;
@@ -2533,6 +2543,8 @@ body {
     border-radius: 3px;
     font-size: 0.8em;
     margin-bottom: 10px; }
+  body main {
+    padding-bottom: 1em; }
 
 .light-grey-box {
   background-color: #d7d4d4;
@@ -2605,11 +2617,19 @@ a:link, a:visited, a:hover, a:active {
   color: #010101;
   text-decoration: none; }
 
+.inline-link {
+  color: #fb46ca !important;
+  text-decoration: underline !important; }
+
 .p-15-top {
   padding-top: 15px; }
 
+.p-15-bottom {
+  padding-bottom: 15px; }
+
 .margin-no-top {
-  margin-top: 0px; }
+  margin-top: 0px;
+  vertical-align: top; }
 
 .margin-no-right {
   position: relative;
@@ -2628,6 +2648,9 @@ a:link, a:visited, a:hover, a:active {
   margin: auto;
   width: 3.7em;
   text-align: center; }
+
+form {
+  margin-bottom: 2em; }
 
 .owl-wrapper-outer {
   height: 31em !important;

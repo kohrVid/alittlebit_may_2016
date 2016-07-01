@@ -18,4 +18,9 @@
   = select_tag(:authors, collection: Author.all, fields: [:full_name, :id], tabindex: index, multiple: "multiple", selected: @book.authors.map(&:id), name: "authors")
   - index += 1
 %fieldset
+  %strong
+    = f.label :genres, id: "genres", class: "margin-no-top"
+  = select_tag(:genres, collection: Genre.all, fields: [:name, :id], tabindex: index, multiple: "multiple", selected: @book.genres.map(&:id), name: "genres")
+  - index += 1
+%fieldset
   = f.submit "Submit", class: "pink-button", role: "button", tabindex: index

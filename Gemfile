@@ -21,6 +21,8 @@ gem 'sass'
 gem 'haml'
 gem 'activerecord', '>= 3.1', :require => 'active_record'
 gem 'pg'
+gem "carrierwave", "0.10.0", :require => ["carrierwave", "carrierwave/orm/activerecord"]
+gem "mini_magick"
 
 # Test requirements
 gem 'database_cleaner', :group => 'test'

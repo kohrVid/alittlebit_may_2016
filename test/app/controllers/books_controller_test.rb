@@ -1,5 +1,17 @@
 require File.expand_path(File.dirname(__FILE__) + '/../../test_config.rb')
 
+describe "GET index" do
+  it "should give a 200 OK" do
+    get "/books"
+    last_response.status.must_equal 200
+  end
+  
+  it "should give a 200 OK" do
+    get "/"
+    last_response.status.must_equal 200
+  end
+end
+
 describe "GET new" do
   before do
     get "/books/new"
@@ -49,6 +61,26 @@ describe "GET edit" do
       put "/books/#{@book.id}", @params
       last_response.redirect?
       @book.authors.must_include @other_author
+    end
+  end
+end
+
+describe "GET show" do
+  before do
+    @book = Book.create(BookHelper.book)
+    get "/books/#{@book.id}"
+  end
+
+  it "should give a 200 OK" do
+    last_response.status.must_equal 200
+  end
+
+  describe "DELETE to /books/:id" do
+    it "should destroy a book" do
+      original_count = Book.count
+      delete "/books/#{@book.id}"
+      last_response.redirect?
+      Book.count.must_equal original_count - 1
     end
   end
 end

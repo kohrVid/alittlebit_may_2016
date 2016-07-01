@@ -1,0 +1,40 @@
+- index = 1
+- Author.columns.map(&:name).each do |col|
+  - unless ["id", "created_at", "updated_at"].include? col
+    %fieldset
+      %strong
+        = f.label col, id: col
+      - if col == "dob"
+        = f.date_field col, max: (Time.now + 3.years), value: Time.now, "aria-labelledby": col, tabindex: index
+      - elsif col == "image_url"
+        = f.file_field :image_url, accept: "image/jpeg,image/gif,image/png"
+      - elsif col == "biography"
+        = f.text_area col, "aria-labelledby": col, tabindex: index
+      - else
+        = f.text_field col, "aria-labelledby": col, tabindex: index
+    - index += 1
+%fieldset
+  %strong
+    = f.label :books, id: "books"
+  - if @author.books.empty?
+    This author has no books listed. 
+    = link_to "Please click here", url_for(:books, :new), class: "inline-link" 
+    to add a new one.
+  - else
+    = f.fields_for :books do |book_form|
+      %fieldset
+        - Book.columns.map(&:name).each do |col|
+          - unless ["id", "created_at", "updated_at"].include? col
+            %p
+              %strong
+                = book_form.label col, id: col, class: "margin-no-top"
+              - if col == "published_on"
+                = book_form.date_field col, max: (Time.now + 3.years), value: Time.now, "aria-labelledby": col, tabindex: index
+              - elsif col == "synopsis"
+                =find_and_preserve do
+                  = book_form.text_area col, rows: 20, cols: 45, "aria-labelledby": col, tabindex: index
+              - else
+                = book_form.text_field col, "aria-labelledby": col, tabindex: index
+              - index += 1
+%fieldset
+  = f.submit "Submit", class: "pink-button", role: "button", tabindex: index

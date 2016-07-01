@@ -1,6 +1,8 @@
 class Author < ActiveRecord::Base
-  has_many :author_books
-  has_many :books, through: :author_books
+  has_many :author_books, dependent: :destroy
+  has_many :books, through: :author_books, foreign_key: :book_id
+  accepts_nested_attributes_for :books, allow_destroy: true, reject_if: :all_blank
+  mount_uploader :image_url, ImageUploader
 
   validates :title, length: { maximum: 10 }
   validates :biography, presence: true, length: { minimum: 10 }, uniqueness: true

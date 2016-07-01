@@ -1,0 +1,5 @@
+%main.row
+  .col--9-12-offset-2.col--mob-4-4
+    %h1 New Author
+    = form_for @author, url_for(:authors, :create), role: "form" do |f|
+      = partial "authors/form", locals: { f: f }

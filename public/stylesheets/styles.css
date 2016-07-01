@@ -2620,7 +2620,8 @@ a:link, a:visited, a:hover, a:active {
   background-color: #fb46ca;
   color: white !important;
   padding: 8px 17px;
-  border-radius: 5px; }
+  border-radius: 5px;
+  border: 0px; }
 
 .small-button {
   padding: 4px;

@@ -1,5 +1,5 @@
 class Book < ActiveRecord::Base
-  has_many :author_books
+  has_many :author_books, dependent: :destroy
   has_many :authors, through: :author_books
 
   validates :title, presence: true

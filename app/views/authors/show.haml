@@ -1,0 +1,23 @@
+%main(itemscope itemtype="https://schema.org/Person")
+  %article
+    .row
+      %h1.col--5-12-offset-2.col--mob-2-4(itemprop="name")
+        = @author.full_name
+    .row.p-15-bottom
+      .col--9-12-offset-2.col--mob-4-4
+        = image_tag "#{@author.image_url}", alt: "#{@author.full_name}", class: "inline-image"
+        .dark-grey.small-font
+          %span(itemprop="birthDate") Born: #{ @author.dob.nil? ? "Unknown" : @author.dob.strftime("%d %B %Y") }, 
+          %span(itemprop="birthPlace") #{@author.place_of_birth}
+        %p
+          = @author.biography
+      
+    %section
+      .row
+        .b-2-top.b-pink.col--9-12-offset-2.col--mob-4-4.p-15-top
+          %h2
+            Published Books
+          %ul
+            - @author.books.each do |book|
+              %li
+                = link_to book.title, "/books/#{book.id}", class: "inline-link"

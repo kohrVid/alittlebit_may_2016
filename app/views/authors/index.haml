@@ -1,0 +1,9 @@
+%main(itemscope itemtype="https://schema.org/Person")
+  .row
+    .col--9-12-offset-2.col--mob-4-4
+      %h1
+        Authors
+      %ul
+        - @authors.each do |author|
+          %li
+            = link_to author.full_name, "/authors/#{author.id}", class: "inline-link"

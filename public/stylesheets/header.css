@@ -32,6 +32,8 @@ body {
     margin-bottom: 10px; }
   body main {
     padding-bottom: 1em; }
+  body .index-section {
+    margin-bottom: 0px; }
 
 .light-grey-box {
   background-color: #d7d4d4;
@@ -53,6 +55,10 @@ body {
   .inline-list li {
     display: inline-block; }
 
+.no-bullet {
+  list-style-type: none;
+  padding-left: 0; }
+
 .display-inline {
   display: inline; }
 
@@ -62,19 +68,33 @@ body {
 .stretch-image img {
   width: 100%; }
 
-.icon {
+.icon-pink {
   display: inline-block;
   position: relative;
   background-color: #fb46ca;
-  background-position: 25px 0;
+  border-radius: 100px; }
+
+.icon-blue {
+  display: inline-block;
+  position: relative;
+  background-color: #bdddea;
   border-radius: 100px; }
 
 .icon--bulb {
   background-image: url("/images/a-little-bit_icons_50x226.png");
   background-repeat: no-repeat;
+  background-position: 25px 0;
   width: 100px;
   height: 100px;
   left: 10px;
+  top: 16px; }
+
+.icon--ipad {
+  background-image: url("/images/a-little-bit_icons_50x226.png");
+  background-repeat: no-repeat;
+  background-position: 15px -219px;
+  width: 5em;
+  height: 5em;
   top: 16px; }
 
 /*# sourceMappingURL=header.css.map */

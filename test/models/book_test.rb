@@ -67,11 +67,11 @@ describe "Book" do
       book.valid?.wont_equal true
     end
     
+=end
     it "should have at least one genre" do
       @valid_book[:genres] = []
       book = Book.new(@valid_book)
       book.valid?.wont_equal true
     end
-=end
   end
 end

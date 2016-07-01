@@ -1,28 +1,40 @@
 @import "main.scss";
 
-.top-header{
-  .company-name {
-    
-  }
-}
-
-.icon {
+@mixin icon($colour) {
   display: inline-block;
   position: relative;
   background: {
-    color: $pink;
-    position: 25px 0;
+    color: $colour;
   }
   border-radius: 100px;
+}
+
+.icon-pink{
+  @include icon($pink);
+}
+.icon-blue {
+  @include icon($powder-blue);
 }
 
 .icon--bulb {
   background: {
     image: url("/images/a-little-bit_icons_50x226.png");
     repeat: no-repeat;
+    position: 25px 0;
   }
   width: 100px;
   height: 100px;
   left: 10px;
+  top: 16px;
+}
+
+.icon--ipad {
+  background: {
+    image: url("/images/a-little-bit_icons_50x226.png");
+    repeat: no-repeat;
+    position: 15px -219px;
+  }
+  width: 5em;
+  height: 5em;
   top: 16px;
 }

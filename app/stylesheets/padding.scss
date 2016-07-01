@@ -16,3 +16,14 @@
   margin-right: 0;
   right: -3em;
 }
+
+.dotted-top {
+  > div, li{
+    border-top: 1px dotted #010101;
+    padding: 1em 0;
+  }
+  li:first-child,  div:first-child {
+    border-top: none !important;
+  }
+}
+

@@ -57,6 +57,10 @@ body {
   main {
     padding-bottom: 1em;
   }
+
+  .index-section {
+    margin-bottom: 0px;
+  }
 }
 
 .light-grey-box {
@@ -83,6 +87,11 @@ body {
   li {
     display: inline-block;
   }
+}
+
+.no-bullet {
+  list-style-type: none;
+  padding-left: 0;
 }
 
 .display-inline {

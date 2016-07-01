@@ -1,49 +1,39 @@
 %main(itemscope itemtype="https://schema.org/Book")
   .row
     .col--9-12-offset-2.col--mob-4-4
-      #carousel.owl-carousel
-        .item#carousel-1
-          .slide
-            .circle-big
-              .circle-medium
-                .circle-small
-            .text
-              %h1
-                a Little Bit of <strong class="knowledge">KnowHow</strong>
-              %em.author-index.display-block.col--5-12.col--mob-4-4
-                by Albert Einstein
-              .row
-                %blockquote.blockquote-blue.col--4-12-offset-6
-                  When the poet Paul Valery once asked Albert Einstein if he kept a notebook to record his ideas, Einstein looked at him with mild but genuine surprise. "Oh, that's not necessary," he replied . "It's so seldom I have one.  
-                  %cite
-                    Bill Bryson
-                  %a{href: "#", class: "pink-button small-button display-block margin-no-right"} More
-            = image_tag "alb-blue.png", alt: "a Little Bit of KnowHow book cover", class: "col--4-12-offset-1"
-        .item#carousel-2
-          .slide
-            .circle-big
-              .circle-medium
-                .circle-small
-            .text
-              %h1
-                a Little Bit of <strong class="knowledge">KnowHow</strong>
-              .row
-                %blockquote.blockquote-blue.col--4-12-offset-6
-  %setion.index-section
+      = partial "books/carousel"
+  %section.index-section
     .row
       %article.col--4-12-offset-2.col--mob-4-4
-        %h1 We launched our NEW Ebooks...
-        = image_tag "", alt: "New Ebooks"
+        .row
+          #logo.icon-blue.icon--ipad.col--1-8.col--mob-1-4>
+            %i
+          .col--7-8.col--mob-3-4.margin-no-top 
+            %h1 We launched our NEW Ebooks...
+        .stretch-image
+          = image_tag "/images/blog-image.png", alt: "New Ebooks"
         .headline
           The eternal mystery of the world is its comprehensibility, I want to know God's thoughts; the rest are details. I never think of the future. It come soon enough. Weakness of attitude becomes weakness of character.
           %a{href: "#", class: "pink-button small-button display-block margin-no-right"} More
 
-      %aside.col--4-12.col--mob-4-4
+      %aside.col--5-12.col--mob-4-4.margin-no-top
         %h2 What's being said...
-        %ul
-          %li
-            %div
-              Our tweets and facebook messages
+        %ul.no-bullet.dotted-top
+          - @tweets.each do |tweet|
+            %li
+              %div
+                .col--1-8.col--mob-1-4.stretch-image
+                  = image_tag "/images/twitter-icon.png"
+                .col--7-8.col--mob-3-4.margin-no-top
+                  = tweet
+            %li
+              %div
+                .col--1-8.col--mob-1-4.stretch-image
+                  = image_tag "/images/facebook-icon.png"
+                .col--7-8.col--mob-3-4.margin-no-top
+                  Example facebook message
+
+              
 
   %aside
     .row

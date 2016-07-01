@@ -26,7 +26,9 @@ describe "GET new" do
       @params = {}
       @params[:book]= BookHelper.book
       @params[:book].delete(:authors)
+      @params[:book].delete(:genres)
       @params[:authors] = BookHelper.book[:authors].map{ |author| author.id }
+      @params[:genres] = BookHelper.book[:genres].map{ |genre| genre.id }
     end
 
     it "should post a book" do
@@ -50,17 +52,20 @@ describe "GET edit" do
 
   describe "PUT to /books/:id" do
     before do
-      @other_author = Author.create(AuthorHelper.mononym.attributes)
+     # @other_author = Author.create(AuthorHelper.mononym.attributes)
       @params = {}
       @params[:book] = BookHelper.book
+      @params[:book][:title] = "This is a new title. See here!"
       @params[:book].delete(:authors)
-      @params[:authors] = [@other_author.id]
+      @params[:book].delete(:genres)
+      @params[:authors] = BookHelper.book[:authors].map{ |author| author.id }
+      @params[:genres] = BookHelper.book[:genres].map{ |genre| genre.id }
     end
 
     it "should update a book" do
       put "/books/#{@book.id}", @params
       last_response.redirect?
-      @book.authors.must_include @other_author
+      @book.title.must_include "This is a new title. See here!"
     end
   end
 end

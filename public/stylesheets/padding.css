@@ -13,4 +13,10 @@
   margin-right: 0;
   right: -3em; }
 
+.dotted-top > div, .dotted-top li {
+  border-top: 1px dotted #010101;
+  padding: 1em 0; }
+.dotted-top li:first-child, .dotted-top div:first-child {
+  border-top: none !important; }
+
 /*# sourceMappingURL=padding.css.map */

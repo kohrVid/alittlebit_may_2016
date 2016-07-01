@@ -6,3 +6,8 @@ vendor/gems/*
 .sass-cache/*
 db/*.db
 .*.sw*
+/coverage/*
+/public/uploads/tmp/*
+
+# Ignore application configuration
+/config/application.yml

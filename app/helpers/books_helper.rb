@@ -3,9 +3,6 @@
 module Alittlebit
   class App
     module BooksHelper
-      # def simple_helper_method
-      # ...
-      # end
     end
 
     helpers BooksHelper

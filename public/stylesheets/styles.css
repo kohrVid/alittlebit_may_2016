@@ -2107,6 +2107,8 @@ body {
     margin-bottom: 10px; }
   body main {
     padding-bottom: 1em; }
+  body .index-section {
+    margin-bottom: 0px; }
 
 .light-grey-box {
   background-color: #d7d4d4;
@@ -2127,6 +2129,10 @@ body {
   list-style-type: none; }
   .inline-list li {
     display: inline-block; }
+
+.no-bullet {
+  list-style-type: none;
+  padding-left: 0; }
 
 .display-inline {
   display: inline; }
@@ -2184,6 +2190,8 @@ body {
     margin-bottom: 10px; }
   body main {
     padding-bottom: 1em; }
+  body .index-section {
+    margin-bottom: 0px; }
 
 .light-grey-box {
   background-color: #d7d4d4;
@@ -2205,6 +2213,10 @@ body {
   .inline-list li {
     display: inline-block; }
 
+.no-bullet {
+  list-style-type: none;
+  padding-left: 0; }
+
 .display-inline {
   display: inline; }
 
@@ -2214,19 +2226,33 @@ body {
 .stretch-image img {
   width: 100%; }
 
-.icon {
+.icon-pink {
   display: inline-block;
   position: relative;
   background-color: #fb46ca;
-  background-position: 25px 0;
+  border-radius: 100px; }
+
+.icon-blue {
+  display: inline-block;
+  position: relative;
+  background-color: #bdddea;
   border-radius: 100px; }
 
 .icon--bulb {
   background-image: url("/images/a-little-bit_icons_50x226.png");
   background-repeat: no-repeat;
+  background-position: 25px 0;
   width: 100px;
   height: 100px;
   left: 10px;
+  top: 16px; }
+
+.icon--ipad {
+  background-image: url("/images/a-little-bit_icons_50x226.png");
+  background-repeat: no-repeat;
+  background-position: 15px -219px;
+  width: 5em;
+  height: 5em;
   top: 16px; }
 
 body {
@@ -2263,6 +2289,8 @@ body {
     margin-bottom: 10px; }
   body main {
     padding-bottom: 1em; }
+  body .index-section {
+    margin-bottom: 0px; }
 
 .light-grey-box {
   background-color: #d7d4d4;
@@ -2283,6 +2311,10 @@ body {
   list-style-type: none; }
   .inline-list li {
     display: inline-block; }
+
+.no-bullet {
+  list-style-type: none;
+  padding-left: 0; }
 
 .display-inline {
   display: inline; }
@@ -2327,6 +2359,8 @@ body {
     margin-bottom: 10px; }
   body main {
     padding-bottom: 1em; }
+  body .index-section {
+    margin-bottom: 0px; }
 
 .light-grey-box {
   background-color: #d7d4d4;
@@ -2347,6 +2381,10 @@ body {
   list-style-type: none; }
   .inline-list li {
     display: inline-block; }
+
+.no-bullet {
+  list-style-type: none;
+  padding-left: 0; }
 
 .display-inline {
   display: inline; }
@@ -2420,6 +2458,8 @@ body {
     margin-bottom: 10px; }
   body main {
     padding-bottom: 1em; }
+  body .index-section {
+    margin-bottom: 0px; }
 
 .light-grey-box {
   background-color: #d7d4d4;
@@ -2440,6 +2480,10 @@ body {
   list-style-type: none; }
   .inline-list li {
     display: inline-block; }
+
+.no-bullet {
+  list-style-type: none;
+  padding-left: 0; }
 
 .display-inline {
   display: inline; }
@@ -2545,6 +2589,8 @@ body {
     margin-bottom: 10px; }
   body main {
     padding-bottom: 1em; }
+  body .index-section {
+    margin-bottom: 0px; }
 
 .light-grey-box {
   background-color: #d7d4d4;
@@ -2565,6 +2611,10 @@ body {
   list-style-type: none; }
   .inline-list li {
     display: inline-block; }
+
+.no-bullet {
+  list-style-type: none;
+  padding-left: 0; }
 
 .display-inline {
   display: inline; }
@@ -2635,6 +2685,12 @@ a:link, a:visited, a:hover, a:active {
   position: relative;
   margin-right: 0;
   right: -3em; }
+
+.dotted-top > div, .dotted-top li {
+  border-top: 1px dotted #010101;
+  padding: 1em 0; }
+.dotted-top li:first-child, .dotted-top div:first-child {
+  border-top: none !important; }
 
 .pink-button {
   background-color: #fb46ca;

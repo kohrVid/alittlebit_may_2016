@@ -32,6 +32,8 @@ body {
     margin-bottom: 10px; }
   body main {
     padding-bottom: 1em; }
+  body .index-section {
+    margin-bottom: 0px; }
 
 .light-grey-box {
   background-color: #d7d4d4;
@@ -52,6 +54,10 @@ body {
   list-style-type: none; }
   .inline-list li {
     display: inline-block; }
+
+.no-bullet {
+  list-style-type: none;
+  padding-left: 0; }
 
 .display-inline {
   display: inline; }
